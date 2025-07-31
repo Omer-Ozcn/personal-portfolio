@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+html, body, #root {
+  min-height: 100%;
+  overflow: visible !important;
+  position: relative;
+}
