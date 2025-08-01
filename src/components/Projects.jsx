@@ -1,4 +1,4 @@
-// Projects.jsx
+
 import React from "react";
 import { useLang } from "../context/LangContext";
 import jokesImg from "../assets/projects-image/jokes.jpg";

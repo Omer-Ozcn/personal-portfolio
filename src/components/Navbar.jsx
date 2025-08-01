@@ -14,7 +14,6 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-10 flex items-center justify-center relative">
-        {/* Menü */}
         <ul
           className={`flex gap-10 text-base font-normal ${
             isDark ? "text-[#FAFAFA]" : "text-[#222]"
@@ -42,9 +41,7 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* Sağ bölüm */}
         <div className="absolute right-4 top-1/2 -translate-y-1/2 -translate-x-[180px] flex items-center gap-4">
-          {/* Tema butonu */}
           <div className="flex items-center gap-4">
             <div
               onClick={toggleTheme}
@@ -72,12 +69,10 @@ export default function Navbar() {
             </span>
           </div>
 
-          {/* Dikey çizgi */}
           <span className="text-[#777777] font-bold text-[15px] tracking-widest">
             |
           </span>
 
-          {/* Dil geçiş butonu */}
           <button
             onClick={toggleLang}
             className="text-[15px] font-bold tracking-widest flex gap-1"

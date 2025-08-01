@@ -7,8 +7,3 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-html, body, #root {
-  min-height: 100%;
-  overflow: visible !important;
-  position: relative;
-}

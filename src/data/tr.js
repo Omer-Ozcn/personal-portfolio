@@ -36,10 +36,23 @@ Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam t
     line2: "çalışalım; bir sonraki ürününüz için.",
     links: [
       { label: "GitHub", url: "https://github.com/you" },
-      { label: "Kişisel Blog", url: "#" },
       { label: "LinkedIn", url: "#" },
       { label: "E‑posta", url: "mailto:mail@you.com" }
     ]
+  },
+  contact: {
+    contactTitle: "İletişim Formu",
+    namePlaceholder: "Adınız",
+    emailPlaceholder: "E-posta adresiniz",
+    messagePlaceholder: "Mesajınız",
+    nameRequired: "Ad zorunludur",
+    emailRequired: "E-posta zorunludur",
+    emailInvalid: "Geçerli bir e-posta giriniz",
+    messageRequired: "Mesaj zorunludur",
+    messageMinLength: "Mesaj en az 10 karakter olmalıdır",
+    submitButton: "Gönder",
+    successToast: "Mesajınız başarıyla gönderildi 🎉",
+    errorToast: "Bir hata oluştu, lütfen tekrar deneyin."
   }
 };
 

@@ -11,8 +11,6 @@ export default function PageDecorations() {
           style={{ position: "relative", right: 0 }}
         />
       </div>
-
-
       <div className="absolute z-0 w-[181px] h-[49px] rounded-full border-[29.5px] border-[#525252] top-[1475px] -left-[70px]"></div>
       <div className="absolute z-[1] w-[121px] h-[121px] rounded-full border-[21px] border-[#D9D9D9] top-[750px] left-[1175px]"></div>
     </>

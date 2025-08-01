@@ -38,6 +38,20 @@ const en = {
       { label: "LinkedIn", url: "#" },
       { label: "Email", url: "mailto:mail@you.com" }
     ]
+  },
+  contact: {
+    contactTitle: "Contact Form",
+    namePlaceholder: "Your Name",
+    emailPlaceholder: "Your Email",
+    messagePlaceholder: "Your Message",
+    nameRequired: "Name is required",
+    emailRequired: "Email is required",
+    emailInvalid: "Enter a valid email",
+    messageRequired: "Message is required",
+    messageMinLength: "Message should be at least 10 characters",
+    submitButton: "Send",
+    successToast: "Message sent successfully 🎉",
+    errorToast: "An error occurred, please try again."
   }
 };
 

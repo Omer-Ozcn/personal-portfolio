@@ -23,7 +23,6 @@ export default function Hero() {
   return (
     <div className="w-full h-[738px] bg-[#f4f4f4] dark:bg-[#2A262B] relative overflow-visible">
       <div className="relative w-full max-w-[1107px] h-full mx-auto">
-        {/* Sol üst içerik */}
         <div className="absolute w-[683px] h-[313px] top-20 left-0">
           <div className="absolute top-0 left-3 text-3xl text-black dark:text-white tracking-[3px] leading-normal font-normal font-inter">
             {t.hero.hi}
@@ -40,7 +39,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Sağ görsel */}
         <div className="absolute w-[361px] h-[361px] top-20 left-[746px]">
           <div className="w-[344px] h-[343px] bg-[#e92577] rounded-[32px] absolute top-0 left-0" />
           <img
@@ -50,9 +48,7 @@ export default function Hero() {
           />
         </div>
 
-        {/* Sosyal ikonlar + alt yazı */}
         <div className="absolute w-[542px] h-[123px] bottom-[160px] left-3">
-          {/* Sosyal ikonlar */}
           {socialLinks.map((social, index) => {
             const IconComponent = social.icon;
             return (
@@ -69,7 +65,6 @@ export default function Hero() {
             );
           })}
 
-          {/* Alt açıklama */}
           <div className="absolute top-[60px] left-0 font-normal text-lg leading-8 font-inter">
             <span className="text-black dark:text-white tracking-[0.16px]">{t.hero.bottomText1} </span>
             <span className="text-[#af0c48] tracking-[0.16px]">{t.hero.bottomText2}</span>
