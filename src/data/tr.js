@@ -2,18 +2,18 @@ const tr = {
   nav: { home: "Ana Sayfa", skills: "Yetenekler", projects: "Projeler", profile: "Profil" },
   hero: {
     hi: "Merhaba! 👋",
-    iAm: "I'm",
-    name: "Almila",
+    iAm: "Ben",
+    name: "Ömer",
     title: "Full‑stack developer.",
-    desc: "Ölçeklenebilir frontend ürünleri geliştiririm.",
+    desc: "Kullanışlı ve geliştirilebilir arayüzler tasarlıyorum.",
     cta: "Buluşalım!",
     bottomText1: "Şu anda",
     bottomText2: "Freelance",
     bottomText3: "olarak",
     bottomText4: "UX, UI ve Web Tasarımı",
     bottomText5: "projelerinde çalışıyorum.",
-    bottomText6: "Beni ekibine davet et ->",
-    bottomText7: "pratamaiosi@gmail.com",
+    bottomText6: "Ekibinize katılmamı ister misiniz? ->",
+    bottomText7: "omerozcn98@gmail.com",
   },
   skillsTitle: "Yetenekler",
   profileTitle: "Profil",
@@ -24,9 +24,9 @@ const tr = {
 
 Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!`,
     fields: [
-      { k: "Doğum Tarihi", v: "24.03.1996" },
+      { k: "Doğum Tarihi", v: "30.07.1998" },
       { k: "İkamet Şehri", v: "Ankara" },
-      { k: "Eğitim Durumu", v: "Hacettepe Ünv. Biyoloji\nLisans, 2016" },
+      { k: "Eğitim Durumu", v: "Lisans - MEF Üniv. İnşaat Mühendisliği, 2022\n\nYüksek Lisans - Yıldız Teknik Üniversitesi Mekanik" },
       { k: "Tercih Ettiği Rol", v: "Frontend, UI" }
     ]
   },

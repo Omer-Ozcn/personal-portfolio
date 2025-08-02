@@ -44,7 +44,7 @@ export default function Projects() {
       <section className="max-w-[1064px] mx-auto pt-10 px-4 pb-0">
         <h2 className="text-center text-xl font-semibold mb-10 dark:text-white">Projects</h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 dark:bg-[#484148] rounded-xl p-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 dark:bg-[#484148] rounded-xl p-4 gap-20">
           {projectsData.map((project) => (
             <div
               key={project.id}
@@ -93,7 +93,7 @@ export default function Projects() {
                 <img
                   src={project.previewImage}
                   alt={`${project.title} preview`}
-                  className="absolute top-[18%] left-[14.5%] w-[71%] h-[78%] object-cover pointer-events-none select-none"
+                  className="absolute top-[23%] left-[14.5%] w-[71%] h-[78%] object-cover pointer-events-none select-none"
                 />
               </div>
             </div>

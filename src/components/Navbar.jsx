@@ -9,23 +9,24 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`w-full pt-10 pb-4 relative transition-colors duration-300 relative z-20 ${
+      className={`w-full pt-6 pb-4 z-20 transition-colors duration-300 ${
         isDark ? "bg-[#2A262B]" : "bg-[#f4f4f4]"
       }`}
     >
-      <div className="container mx-auto px-10 flex items-center justify-center relative">
+      <div className="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        {/* Menü Linkleri */}
         <ul
-          className={`flex gap-10 text-base font-normal ${
+          className={`flex flex-wrap justify-center gap-5 md:gap-10 text-sm md:text-base font-normal ${
             isDark ? "text-[#FAFAFA]" : "text-[#222]"
-          } -translate-x-[210px]`}
+          }`}
         >
           <li>
-            <a href="#hero" className="hover:text-[#E92577] transition-colors ">
+            <a href="#hero" className="hover:text-[#E92577] transition-colors">
               {t.nav.home}
             </a>
           </li>
           <li>
-            <a href="#skills" className="hover:text-[#E92577] transition-colors ">
+            <a href="#skills" className="hover:text-[#E92577] transition-colors">
               {t.nav.skills}
             </a>
           </li>
@@ -41,41 +42,40 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <div className="absolute right-4 top-1/2 -translate-y-1/2 -translate-x-[180px] flex items-center gap-4">
-          <div className="flex items-center gap-4">
+        {/* Tema ve Dil Değiştirici */}
+        <div className="flex justify-center md:justify-end items-center gap-4">
+          {/* Tema Butonu */}
+          <div
+            onClick={toggleTheme}
+            className={`w-[50px] h-[24px] rounded-full relative cursor-pointer ${
+              isDark ? "bg-black" : "bg-[#E92577]"
+            } transition-all duration-300`}
+          >
             <div
-              onClick={toggleTheme}
-              className={`w-[55px] h-[24px] rounded-full relative cursor-pointer ${
-                isDark ? "bg-black" : "bg-[#E92577]"
-              } transition-all duration-300`}
-            >
-              <div
-                className="w-[15px] h-[16px] bg-[#FFE86E] rounded-full absolute top-[4px] transition-all duration-300"
-                style={{ left: isDark ? "5px" : "35px" }}
-              />
-            </div>
-            <span
-              className={`text-[15px] font-bold tracking-widest ${
-                isDark ? "text-[#FAFAFA]" : "text-[#777777]"
-              }`}
-            >
-              {lang === "tr"
-                ? isDark
-                  ? "KOYU MOD"
-                  : "AÇIK MOD"
-                : isDark
-                ? "LIGHT MODE"
-                : "DARK MODE"}
-            </span>
+              className="w-[15px] h-[16px] bg-[#FFE86E] rounded-full absolute top-[4px] transition-all duration-300"
+              style={{ left: isDark ? "5px" : "30px" }}
+            />
           </div>
-
-          <span className="text-[#777777] font-bold text-[15px] tracking-widest">
-            |
+          <span
+            className={`text-sm font-bold tracking-wide ${
+              isDark ? "text-[#FAFAFA]" : "text-[#777777]"
+            }`}
+          >
+            {lang === "tr"
+              ? isDark
+                ? "KOYU MOD"
+                : "AÇIK MOD"
+              : isDark
+              ? "LIGHT MODE"
+              : "DARK MODE"}
           </span>
 
+          <span className="text-[#777777] font-bold text-sm">|</span>
+
+          {/* Dil Değiştirici */}
           <button
             onClick={toggleLang}
-            className="text-[15px] font-bold tracking-widest flex gap-1"
+            className="text-sm font-bold tracking-wide flex gap-1"
           >
             {lang === "tr" ? (
               <>

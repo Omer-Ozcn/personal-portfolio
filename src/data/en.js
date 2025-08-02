@@ -34,7 +34,6 @@ const en = {
     line2: "together on your next product.",
     links: [
       { label: "GitHub", url: "https://github.com/you" },
-      { label: "Personal Blog", url: "#" },
       { label: "LinkedIn", url: "#" },
       { label: "Email", url: "mailto:mail@you.com" }
     ]

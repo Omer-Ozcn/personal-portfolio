@@ -2,11 +2,10 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import axios from "axios";
 
-import { useLang } from "../context/LangContext";  // senin context yolun
+import { useLang } from "../context/LangContext"; 
 
 export default function EmailTo({ onClose }) {
-  const { t } = useLang(); // t burada tr veya en objesi
-
+  const { t } = useLang(); 
   const {
     register,
     handleSubmit,
