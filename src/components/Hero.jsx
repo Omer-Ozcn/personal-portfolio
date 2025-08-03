@@ -24,7 +24,6 @@ export default function Hero() {
     <div className="w-full min-h-[700px] bg-[#f4f4f4] dark:bg-[#2A262B] relative overflow-visible px-4 md:px-0">
       <div className="max-w-[1107px] mx-auto flex flex-col md:flex-row items-center md:items-start h-full relative py-20 md:py-0">
         
-        {/* Text section */}
         <div className="relative md:w-[60%] w-full mb-12 md:mb-0 md:pt-8">
           <div className="text-3xl md:text-4xl text-black dark:text-white tracking-[3px] font-inter mb-7 md:mb-16 md:pl-[15px] md:translate-y-[63px]">
             {t.hero.hi}
@@ -41,7 +40,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Avatar section */}
         <div className="relative md:w-[40%] w-full flex justify-center md:justify-end md:pt-16">
           <div className="relative w-[240px] h-[240px] md:w-[344px] md:h-[343px] bg-[#e92577] rounded-[32px]">
             <img

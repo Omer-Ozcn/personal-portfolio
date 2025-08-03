@@ -20,14 +20,16 @@ const tr = {
   profile: {
     basicTitle: "Temel Bilgiler",
     aboutTitle: "Hakkımda",
-    about: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.
+    about: `Alanında yetkin bir Full Stack Developer olma yolunda sürekli kendimi geliştiriyorum. Halen Yıldız Teknik Üniversitesi Mekanik Bölümü’nde yüksek lisans yapmaktayım. Mezun olduktan sonra Workintech'te 78 farklı projede 960 saatlik FrontEnd ve BackEnd eğitimi aldım.
 
-Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!`,
+Yazılım dünyasına adım attıktan sonra, duyarlı ve kullanıcı dostu arayüzler tasarlamaya, karmaşık veri akışlarını etkin şekilde yönetmeye ve sorunsuz deneyimler sunmaya odaklandım. Öğrenmeye ve takım çalışmasına her zaman açık olup, yenilikçi fikirleri gerçek ürünlere dönüştürmek için istekliyim.
+
+`,
     fields: [
       { k: "Doğum Tarihi", v: "30.07.1998" },
-      { k: "İkamet Şehri", v: "Ankara" },
-      { k: "Eğitim Durumu", v: "Lisans - MEF Üniv. İnşaat Mühendisliği, 2022\n\nYüksek Lisans - Yıldız Teknik Üniversitesi Mekanik" },
-      { k: "Tercih Ettiği Rol", v: "Frontend, UI" }
+      { k: "İkamet Şehri", v: "İstanbul" },
+      { k: "Eğitim Durumu", v: "Lisans - MEF Üniv. İnşaat Mühendisliği, 2022\n\nYüksek Lisans - Yıldız Teknik Üniversitesi Mekanik, 2024" },
+      { k: "Tercih Ettiği Rol", v: "Full-Stack Geliştirici" }
     ]
   },
   projectsTitle: "Projeler",

@@ -16,7 +16,7 @@ export default function EmailTo({ onClose }) {
   const onSubmit = async (data) => {
     try {
       await axios.post(
-        "https://formsubmit.co/ajax/omerzcn@outlook.com",
+        "https://formsubmit.co/ajax/omerozcn98@gmail.com",
         data,
         {
           headers: {

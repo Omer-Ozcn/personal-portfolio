@@ -3,9 +3,9 @@ const en = {
   hero: {
     hi: "Hi! 👋",
     iAm: "I'm",
-    name: "Almila",
+    name: "Omer",
     title: "Full‑stack developer.",
-    desc: "I craft scalable frontend products.",
+    desc: "I can craft solid and scalable frontend products. ",
     cta: "Let’s meet!",
     bottomText1: "Currently",
     bottomText2: "Freelancing",
@@ -20,12 +20,14 @@ const en = {
   profile: {
     basicTitle: "Basic Information",
     aboutTitle: "About",
-    about: "Developer focused on the web, performance and pixel perfection.",
+    about: `I am continuously improving myself with the goal of becoming a proficient Full Stack Developer. I am currently pursuing a master's degree in Mechanical Engineering at Yıldız Technical University. After graduating, I completed 960 hours of FrontEnd and BackEnd training through 78 different projects at Workintech.
+
+Since entering the software development field, I have focused on creating responsive and user-friendly interfaces, managing complex data flows effectively, and delivering seamless user experiences. I am always eager to learn, collaborate, and transform innovative ideas into functional products.`,
     fields: [
-      { k: "Birthday", v: "24.03.1996" },
-      { k: "Residence City", v: "Ankara" },
-      { k: "Education", v: "Hacettepe University Biology\nBachelor's, 2016" },
-      { k: "Preferred Role", v: "Frontend, UI" }
+      { k: "Birthday", v: "30.07.1998" },
+      { k: "Residence City", v: "Istanbul" },
+      { k: "Education", v: "Bachelor's - MEF University, Civil Engineering, 2022\n\nMaster's - Yıldız Technical University, Mechanics, 2024" },
+      { k: "Preferred Role", v: "Full-Stack Developer" }
     ]
   },
   projectsTitle: "Projects",
