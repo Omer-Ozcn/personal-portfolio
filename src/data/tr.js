@@ -20,7 +20,7 @@ const tr = {
   profile: {
     basicTitle: "Temel Bilgiler",
     aboutTitle: "Hakkımda",
-    about: `Alanında yetkin bir Full Stack Developer olma yolunda sürekli kendimi geliştiriyorum. Halen Yıldız Teknik Üniversitesi Mekanik Bölümü’nde yüksek lisans yapmaktayım. Mezun olduktan sonra Workintech'te 78 farklı projede 960 saatlik FrontEnd ve BackEnd eğitimi aldım.
+    about: `Alanında yetkin bir Full Stack Developer olma yolunda sürekli kendimi geliştiriyorum. Yıldız Teknik Üniversitesi Mekanik Mühendisliği Yüksek Lisans yapmaktaydım, WorkinTech’te eğitim alma fırsatı çıktı ve ben de bu fırsatı değerlendirerek 78 farklı projede, toplamda 960 saatlik Frontend ve Backend eğitimi aldım.
 
 Yazılım dünyasına adım attıktan sonra, duyarlı ve kullanıcı dostu arayüzler tasarlamaya, karmaşık veri akışlarını etkin şekilde yönetmeye ve sorunsuz deneyimler sunmaya odaklandım. Öğrenmeye ve takım çalışmasına her zaman açık olup, yenilikçi fikirleri gerçek ürünlere dönüştürmek için istekliyim.
 

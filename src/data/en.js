@@ -20,9 +20,9 @@ const en = {
   profile: {
     basicTitle: "Basic Information",
     aboutTitle: "About",
-    about: `I am continuously improving myself with the goal of becoming a proficient Full Stack Developer. I am currently pursuing a master's degree in Mechanical Engineering at Yıldız Technical University. After graduating, I completed 960 hours of FrontEnd and BackEnd training through 78 different projects at Workintech.
+    about: `I am continuously developing myself on the path to becoming a proficient Full Stack Developer. While pursuing my Master's in Mechanical Engineering at Yıldız Technical University, the opportunity to train at WorkinTech arose, and I seized this opportunity to complete 960 hours of Frontend and Backend training across 78 different projects.
 
-Since entering the software development field, I have focused on creating responsive and user-friendly interfaces, managing complex data flows effectively, and delivering seamless user experiences. I am always eager to learn, collaborate, and transform innovative ideas into functional products.`,
+After stepping into the world of software development, I focused on designing responsive and user-friendly interfaces, efficiently managing complex data flows, and delivering seamless experiences. I am always open to learning and teamwork, and I am eager to transform innovative ideas into real products.`,
     fields: [
       { k: "Birthday", v: "30.07.1998" },
       { k: "Residence City", v: "Istanbul" },
