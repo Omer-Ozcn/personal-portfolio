@@ -6,9 +6,6 @@ import { motion } from "framer-motion";
 import ecommerce from "../assets/projects-image/e-commerce.jpg";
 import yemekler from "../assets/projects-image/yemekler.jpg";
 import laptopImg from "../assets/projects-image/laptop.jpg";
-// EĞER twitter.jpg yoksa hata vermemesi için geçici olarak ecommerce resmini kullanıyoruz.
-// Resim ekleyince alttaki satırı açıp üsttekini silebilirsin:
-// import twitterImg from "../assets/projects-image/twitter.jpg";
 import twitterImg from "../assets/projects-image/twitter.jpg"; 
 
 import en from "../data/en.js";
@@ -16,7 +13,7 @@ import tr from "../data/tr.js";
 
 const projectsData = [
   {
-    id: 3, // Twitter Projesi En Üstte
+    id: 3, 
     title: {
       tr: "Twitter (X) Klonu",
       en: "Twitter (X) Clone",
@@ -26,9 +23,9 @@ const projectsData = [
       en: "A full-stack social media app built with Java Spring Boot & React. Features complex DB relations (Retweet, Follow), security, and responsive UI.",
     },
     githubLink: "https://github.com/Omer-Ozcn/twitter-clone", 
-    appLink: "#",
+    // appLink BURADA YOK, bu yüzden buton otomatik olarak gizlenecek.
     technologies: ["Java", "Spring Boot", "PostgreSQL", "React", "Tailwind"],
-    bgGradient: "from-[#00BA7C] to-[#0F1419]", // Twitter renklerine modern dokunuş
+    bgGradient: "from-[#00BA7C] to-[#0F1419]", 
     previewImage: twitterImg,
   },
   {
@@ -39,7 +36,7 @@ const projectsData = [
       en: "Comprehensive e-commerce platform featuring cart and payment management built with modern web tech.",
     },
     githubLink: "https://github.com/Omer-Ozcn/e-commerce",
-    appLink: "#",
+    appLink: "https://ecommerce-omer.vercel.app/",
     technologies: ["React", "Redux", "Axios", "Tailwind CSS"],
     bgGradient: "from-[#2980B9] to-[#6DD5FA]", 
     previewImage: ecommerce,
@@ -52,7 +49,7 @@ const projectsData = [
       en: "Pizza ordering application featuring dynamic form management for user customization.",
     },
     githubLink: "https://github.com/Omer-Ozcn/fsweb-s8-challenge-pizza",
-    appLink: "#",
+    appLink: "https://pizzaorder-omer.vercel.app/",
     technologies: ["React", "Cypress", "Formik"],
     bgGradient: "from-[#D4145A] to-[#FBB03B]",
     previewImage: yemekler,
@@ -119,14 +116,21 @@ export default function Projects() {
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.065 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" fill="currentColor"/></svg>
                       Github
                     </a>
-                    <a 
-                      href={project.appLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition-colors flex items-center gap-2"
-                    >
-                      Live Demo →
-                    </a>
+                    
+                    {/* DEĞİŞİKLİK BURADA YAPILDI:
+                       project.appLink varsa butonu göster, yoksa gösterme.
+                    */}
+                    {project.appLink && (
+                      <a 
+                        href={project.appLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition-colors flex items-center gap-2"
+                      >
+                        Live Demo →
+                      </a>
+                    )}
+
                   </div>
                 </div>
 

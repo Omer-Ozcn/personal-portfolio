@@ -1,10 +1,15 @@
+import React, { useState } from "react"; // 1. useState eklendi
 import { Github, Linkedin, Mail } from "lucide-react";
 import { useLang } from "../context/LangContext";
 import { motion } from "framer-motion";
 import avatar from "../assets/hero.jpg";
+import EmailTo from "./EmailTo"; // 2. EmailTo bileşeni import edildi (Yolunu projene göre ayarla)
 
 export default function Hero() {
   const { t } = useLang();
+  
+  // 3. Modalın açık/kapalı durumunu tutan state
+  const [showContactModel, setShowContactModel] = useState(false);
 
   return (
     <section id="hero" className="w-full min-h-[85vh] flex items-center bg-[#f4f4f4] dark:bg-[#2A262B] relative overflow-hidden transition-colors duration-300">
@@ -60,13 +65,14 @@ export default function Hero() {
             transition={{ delay: 0.6 }}
             className="flex flex-wrap gap-6 pt-2"
           >
-            <a 
-               href="#contact" // Mailto yerine contact formuna yönlendirebilir veya mailto kalabilir
-               className="px-8 py-4 bg-[#3730A3] dark:bg-[#6366f1] text-white rounded-xl font-bold hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center gap-3"
+            {/* 4. Buton Değişikliği: a etiketi yerine button kullanıldı ve onClick eklendi */}
+            <button 
+               onClick={() => setShowContactModel(true)}
+               className="px-8 py-4 bg-[#3730A3] dark:bg-[#6366f1] text-white rounded-xl font-bold hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center gap-3 cursor-pointer"
             >
               <Mail size={20} />
               {t.hero.cta}
-            </a>
+            </button>
             
             <div className="flex items-center gap-4">
                 <a href="https://github.com/Omer-Ozcn" target="_blank" rel="noreferrer" className="p-3 bg-white dark:bg-gray-800 rounded-full text-gray-700 dark:text-white hover:text-[#3730A3] dark:hover:text-[#6366f1] shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
@@ -96,6 +102,12 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
+
+      {/* 5. Modal Render Edilmesi: State true ise modalı göster */}
+      {showContactModel && (
+        <EmailTo onClose={() => setShowContactModel(false)} />
+      )}
+
     </section>
   );
 }
