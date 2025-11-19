@@ -1,91 +1,101 @@
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { useLang } from "../context/LangContext";
+import { motion } from "framer-motion";
 import avatar from "../assets/hero.jpg";
 
 export default function Hero() {
   const { t } = useLang();
 
-  const socialLinks = [
-    {
-      icon: Linkedin,
-      className: "w-12 h-12 md:w-[50px] md:h-[50px]",
-      position: "left-1 md:left-0",
-      href: "https://linkedin.com/in/yourprofile",
-    },
-    {
-      icon: Github,
-      className: "w-12 h-12 md:w-[50px] md:h-[50px]",
-      position: "left-[55px] md:left-[55px]",
-      href: "https://github.com/yourprofile",
-    },
-  ];
-
   return (
-    <div className="w-full min-h-[700px] bg-[#f4f4f4] dark:bg-[#2A262B] relative overflow-visible px-4 md:px-0">
-      <div className="max-w-[1107px] mx-auto flex flex-col md:flex-row items-center md:items-start h-full relative py-20 md:py-0">
+    <section id="hero" className="w-full min-h-[85vh] flex items-center bg-[#f4f4f4] dark:bg-[#2A262B] relative overflow-hidden transition-colors duration-300">
+      
+      {/* Arka Plan Dekoratif Işıklar */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-pink-500/20 rounded-full blur-[120px]" />
+      </div>
+
+      <div className="max-w-[1107px] mx-auto px-6 w-full flex flex-col-reverse md:flex-row items-center justify-between relative z-10 py-12 md:py-0">
         
-        <div className="relative md:w-[60%] w-full mb-12 md:mb-0 md:pt-8">
-          <div className="text-3xl md:text-4xl text-black dark:text-white tracking-[3px] font-inter mb-7 md:mb-16 md:pl-[15px] md:translate-y-[63px]">
-            {t.hero.hi}
-          </div>
-          <div className="relative w-full max-w-[637px]">
-            <div className="absolute top-8 left-0 w-[148px] h-[31px] bg-[#e92577] rounded hidden md:block z-0" />
-            <h1 className="relative z-10 text-[32px] md:text-[42px] font-medium leading-snug md:leading-[63px] text-[#0A0A14] dark:text-white tracking-[0.01em] font-inter pl-0 md:pl-[15px]">
-              {t.hero.iAm}
-              <span className="ml-2">{t.hero.name}</span>
-              <br />
-              {t.hero.title}
-              <span className="block opacity-80 mt-2">{t.hero.desc}</span>
-            </h1>
-          </div>
+        {/* Sol Taraf */}
+        <div className="md:w-3/5 mt-12 md:mt-0 space-y-8">
+          
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-3"
+          >
+            <div className="h-[1px] w-12 bg-indigo-500"></div>
+            <span className="text-lg text-indigo-600 dark:text-indigo-400 font-medium tracking-wider">
+               {t.hero.name}
+            </span>
+          </motion.div>
+
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.7 }}
+            className="text-5xl md:text-7xl font-black text-[#1A1A1A] dark:text-[#EDEDED] leading-tight tracking-tight"
+          >
+            {t.hero.title}
+            <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">
+              Developer.
+            </span>
+          </motion.h1>
+
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.7 }}
+            className="text-xl text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed"
+          >
+            {t.hero.desc}
+          </motion.p>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="flex flex-wrap gap-6 pt-2"
+          >
+            <a 
+               href="#contact" // Mailto yerine contact formuna yönlendirebilir veya mailto kalabilir
+               className="px-8 py-4 bg-[#3730A3] dark:bg-[#6366f1] text-white rounded-xl font-bold hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center gap-3"
+            >
+              <Mail size={20} />
+              {t.hero.cta}
+            </a>
+            
+            <div className="flex items-center gap-4">
+                <a href="https://github.com/Omer-Ozcn" target="_blank" rel="noreferrer" className="p-3 bg-white dark:bg-gray-800 rounded-full text-gray-700 dark:text-white hover:text-[#3730A3] dark:hover:text-[#6366f1] shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
+                    <Github size={24} />
+                </a>
+                <a href="https://linkedin.com/in/omerzcn1" target="_blank" rel="noreferrer" className="p-3 bg-white dark:bg-gray-800 rounded-full text-gray-700 dark:text-white hover:text-[#0077b5] shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
+                    <Linkedin size={24} />
+                </a>
+            </div>
+          </motion.div>
         </div>
 
-        <div className="relative md:w-[40%] w-full flex justify-center md:justify-end md:pt-16">
-          <div className="relative w-[240px] h-[240px] md:w-[344px] md:h-[343px] bg-[#e92577] rounded-[32px]">
+        {/* Sağ Taraf: Resim */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.8, rotate: 6 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 0.8, type: "spring" }}
+          className="md:w-2/5 flex justify-center md:justify-end"
+        >
+          <div className="relative w-[280px] h-[280px] md:w-[380px] md:h-[380px]">
+            <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-[40px] rotate-6 opacity-60 blur-lg dark:opacity-40"></div>
             <img
               src={avatar}
-              alt="Avatar"
-              className="absolute top-5 left-5 w-[230px] h-[230px] md:w-[341px] md:h-[341px] object-cover rounded-[28px]"
+              alt="Profile"
+              className="relative z-10 w-full h-full object-cover rounded-[40px] shadow-2xl border-[6px] border-white dark:border-[#3E3740]"
             />
           </div>
-        </div>
-
-        {/* Social links and bottom text */}
-        <div className="w-full md:absolute md:bottom-[-170px] md:left-3 flex flex-col md:w-[542px] mt-20 md:mt-0">
-          <nav className="flex justify-center md:justify-start gap-6 mb-6">
-            {socialLinks.map((social, index) => {
-              const IconComponent = social.icon;
-              return (
-                <a
-                  key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`p-2 rounded hover:bg-transparent text-black dark:text-white ${social.className}`}
-                  aria-label={`Go to ${social.href}`}
-                >
-                  <IconComponent className="w-full h-full" />
-                </a>
-              );
-            })}
-          </nav>
-
-          <div className="text-center md:text-left font-normal text-lg leading-7 font-inter text-black dark:text-white space-y-1">
-            <span className="text-black dark:text-white tracking-[0.16px]">{t.hero.bottomText1} </span>
-            <span className="text-[#af0c48] tracking-[0.16px]">{t.hero.bottomText2}</span>
-            <span className="text-black dark:text-white tracking-[0.16px]"> {t.hero.bottomText3} </span>
-            <span className="text-[#af0c48] tracking-[0.16px]">{t.hero.bottomText4}</span>
-            <span className="text-black dark:text-white tracking-[0.16px]">
-              {t.hero.bottomText5}
-              <br />
-              {t.hero.bottomText6}
-            </span>
-            <span className="text-[#af0c48] tracking-[0.32px] underline cursor-pointer">
-              {t.hero.bottomText7}
-            </span>
-          </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
